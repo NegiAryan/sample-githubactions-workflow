@@ -3,7 +3,7 @@ name: "hello added workflow"
 on:
     push:
         branches:
-            -master
+            - master
 
 jobs: 
     date:
