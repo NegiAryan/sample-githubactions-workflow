@@ -1,0 +1,13 @@
+name: "hello added workflow"
+
+on:
+    push:
+        branches:
+            -master
+
+jobs: 
+    date:
+        runs-on: ubuntu-latest
+        steps:
+            - name: "prnt date"
+              run: echo "hello world"
