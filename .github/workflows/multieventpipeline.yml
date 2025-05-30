@@ -4,10 +4,25 @@ on:
     push:
         branches:
             - master
+  
+
+    pull_request:
+        branches:
+            - master
+
 
 jobs: 
-    date:
+    
+    on-date:
         runs-on: ubuntu-latest
         steps:
-            - name: "prnt date"
-              run: echo "hello world"
+            - name: "print date"
+              run: date 
+            
+    on-pull:
+        runs-on: ubuntu-latest
+        steps:
+            - name: "running on pull request"
+              run: echo "running on pull request"
+            
+    
