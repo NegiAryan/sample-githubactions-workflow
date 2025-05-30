@@ -14,12 +14,14 @@ on:
 jobs: 
     
     on-date:
+        if: github.event_name == 'push'
         runs-on: ubuntu-latest
         steps:
             - name: "print date"
               run: date 
             
     on-pull:
+        if: github.event_name == 'pull_request'
         runs-on: ubuntu-latest
         steps:
             - name: "running on pull request"
